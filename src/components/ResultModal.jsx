@@ -1,8 +1,8 @@
-import React from 'react';
+import React,{forwardRef, useImperativeHandle} from 'react';
 
-const ResultModal = ({ref, result, targetTime }) => {
+const ResultModal = forwardRef(function ResultModal({ result, targetTime}, ref) {
 
-
+    useImperativeHandle(ref,);
     return (
         <dialog ref={ref} className="result-modal" open>
             <h2>You {result}</h2>
@@ -13,6 +13,6 @@ const ResultModal = ({ref, result, targetTime }) => {
             </form>
         </dialog>
     );
-};
-
+}
+)
 export default ResultModal;
